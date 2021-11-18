@@ -27,6 +27,7 @@ const OsciladorNoAmortiguado = (masa, K, t_iterado) => {
         }
     } else {
         HabilitarDeshabilitar(false);
+        resorte.style.height = `${X_0_DEFAULT}px`;
     }
     tiempoMostrado.textContent = `t = ${t_iterado/1000}s`
 }
@@ -86,6 +87,7 @@ const tiempoRange = document.getElementById('tiempoLimiteRange');
 
 let paso = true;
 let x_0 = (resorte.offsetHeight) / METROS_A_PIXELES;
+const X_0_DEFAULT = resorte.offsetHeight;
 let tiempo_limite = tiempoRange.value;
 
 if ( masaNumber && masaRange ) {

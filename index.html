@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles.css">
-    <title>Document</title>
+    <title>Simulación de oscilaciones</title>
 </head>
 <body>
     <nav class="nav-bar">
@@ -22,7 +22,7 @@
     <div class="text-container">
         <p>
             Esta es una página web que contiene 3 simulaciones distintas de 3 distintos tipos de osciladores. <br> <br>
-            <b>Oscilador no amortiguado: </b> Es un oscilador que obedece la Ley de Hooke:
+            <b class="blue-color">Oscilador no amortiguado: </b> Es un oscilador que obedece la Ley de Hooke:
             <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=F = -kx">
                 <img src="http://www.alciro.org/cgi/tex.cgi?F = -kx" title="F = -kx" border="0" />
             </a>
@@ -35,7 +35,7 @@
                 <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = x(0)cos(\sqrt{\frac{k}{m}t}) + v(0)sen(\sqrt{\frac{k}{m}t})" title="x(t) = x(0)cos(\sqrt{\frac{k}{m}t}) + v(0)sen(\sqrt{\frac{k}{m}t})" border="0" />
             </a>
             <br>
-            <b>Oscilador amortiguado: </b> Es un oscilador que tiene en cuenta el rozamiento, mismo el cual se opone a la velocidad, es decir que la fuerza de rozamiento es proporcional a la velocidad pero en dirección contraria, puesto en ecuación esto es que:
+            <b class="blue-color">Oscilador amortiguado: </b> Es un oscilador que tiene en cuenta el rozamiento, mismo el cual se opone a la velocidad, es decir que la fuerza de rozamiento es proporcional a la velocidad pero en dirección contraria, puesto en ecuación esto es que:
             <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=F = -kx - Yv">
                 <img src="http://www.alciro.org/cgi/tex.cgi?F = -kx - Yv" title="F = -kx - Yv" border="0" />
             </a>
@@ -53,6 +53,50 @@
                 <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0) + \frac{Y}{2m}x(0) }{w} sen(wt) + x(0) cos(wt) \right)" title="x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0) + \frac{Y}{2m}x(0) }{w} sen(wt) + x(0) cos(wt) \right)" border="0" />
             </a>
             Donde:
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=w = \sqrt{ \frac{k}{m} - \left( \frac{Y}{2m} \right)^{2} }">
+                <img src="http://www.alciro.org/cgi/tex.cgi?w = \sqrt{ \frac{k}{m} - \left( \frac{Y}{2m} \right)^{2} }" title="w = \sqrt{ \frac{k}{m} - \left( \frac{Y}{2m} \right)^{2} }" border="0" />
+            </a>
+            <b>Amortiguamiento crítico: </b> Sucede cuando
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=\left( \frac{Y}{2m} \right)^{2} =  \frac{K}{m}">
+                <img src="http://www.alciro.org/cgi/tex.cgi?\left( \frac{Y}{2m} \right)^{2} =  \frac{K}{m}" title="\left( \frac{Y}{2m} \right)^{2} =  \frac{K}{m}" border="0" />
+            </a>
+            Y el resultado es: 
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = e^{rt}\left( v(0) + \left[ rv(0) + \frac{Y}{m}x(0) \right]t \right)">
+                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = e^{rt}\left( v(0) + \left[ rv(0) + \frac{Y}{m}x(0) \right]t \right)" title="x(t) = e^{rt}\left( v(0) + \left[ rv(0) + \frac{Y}{m}x(0) \right]t \right)" border="0" />
+            </a>
+            Donde:
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=r = -\frac{Y}{2m}">
+                <img src="http://www.alciro.org/cgi/tex.cgi?r = -\frac{Y}{2m}" title="r = -\frac{Y}{2m}" border="0" />
+            </a>
+            <b>Sobreamortiguamiento: </b> Sucede cuando
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=\left( \frac{Y}{2m} \right)^{2} >  \frac{K}{m}">
+                <img src="http://www.alciro.org/cgi/tex.cgi?\left( \frac{Y}{2m} \right)^{2} >  \frac{K}{m}" title="\left( \frac{Y}{2m} \right)^{2} >  \frac{K}{m}" border="0" />
+            </a>
+            Y el resultado es: 
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = \frac{v(0) + \frac{Y}{m}x(0)}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right] + \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]">
+                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = \frac{v(0) + \frac{Y}{m}x(0)}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right] + \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]" title="x(t) = \frac{v(0) + \frac{Y}{m}x(0)}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right] + \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]" border="0" />
+            </a>
+            Donde:
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=r_{1} = -\frac{Y}{2m} + \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }">
+                <img src="http://www.alciro.org/cgi/tex.cgi?r_{1} = -\frac{Y}{2m} + \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }" title="r_{1} = -\frac{Y}{2m} + \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }" border="0" />
+            </a>
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=r_{2} = -\frac{Y}{2m} - \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }">
+                <img src="http://www.alciro.org/cgi/tex.cgi?r_{2} = -\frac{Y}{2m} - \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }" title="r_{2} = -\frac{Y}{2m} - \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }" border="0" />
+            </a>
+            <br> <br>
+            <b class="blue-color">Oscilador amortiguado bajo la acción de una fuerza externa constante: </b> Es practicamente igual que el anterior solo que toma en cuenta esta fuerza, las ecuaciones quedan:
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} +  Y\frac{\mathrm{d}x }{\mathrm{d} t}   kx = F">
+                <img src="http://www.alciro.org/cgi/tex.cgi?m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} +  Y\frac{\mathrm{d}x }{\mathrm{d} t}   kx = F" title="m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} +  Y\frac{\mathrm{d}x }{\mathrm{d} t}   kx = F" border="0" />
+            </a>
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0)   \frac{Y}{2m}x(0) + \frac{F}{m} }{w} sen(wt)   x(0) cos(wt) \right)">
+                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0)   \frac{Y}{2m}x(0) + \frac{F}{m} }{w} sen(wt)   x(0) cos(wt) \right)" title="x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0)   \frac{Y}{2m}x(0) + \frac{F}{m} }{w} sen(wt)   x(0) cos(wt) \right)" border="0" />
+            </a>
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = e^{rt}\left( v(0)   \left[ rv(0) +  \frac{Y}{m}x(0) +\frac{F}{m} \right]t \right)">
+                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = e^{rt}\left( v(0)   \left[ rv(0) +  \frac{Y}{m}x(0) +\frac{F}{m} \right]t \right)" title="x(t) = e^{rt}\left( v(0)   \left[ rv(0) +  \frac{Y}{m}x(0) +\frac{F}{m} \right]t \right)" border="0" />
+            </a>
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = \frac{v(0) +  \frac{Y}{m}x(0) + \frac{F}{m}}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right]   \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]">
+                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = \frac{v(0) +  \frac{Y}{m}x(0) + \frac{F}{m}}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right]   \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]" title="x(t) = \frac{v(0) +  \frac{Y}{m}x(0) + \frac{F}{m}}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right]   \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]" border="0" />
+            </a>
         </p>
     </div>
 </body>

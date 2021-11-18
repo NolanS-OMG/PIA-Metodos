@@ -23,6 +23,8 @@ a {
 
 /* BARRA DE NAVEGACIÓN */
 .nav-bar {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,6 +103,10 @@ a {
     justify-content: center;
     margin-top: 1%;
     margin-bottom: 1%;
+}
+
+.blue-color {
+    color: blue;
 }
 
 .container {
