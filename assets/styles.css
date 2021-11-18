@@ -31,6 +31,7 @@ a {
     min-height: 8vh;
     background-color: var(--dark-background-color);
     border-bottom: solid 1px black;
+    z-index: 2;
 }
 
 .nav-bar h1 {
@@ -48,16 +49,6 @@ a {
     margin-right: 20px;
     border-radius: 3px 3px 0px 0px;
     cursor: pointer;
-}
-
-.nav-bar h4:hover ul {
-    display: flex;
-    transition: 0.5s;
-}
-
-.nav-bar h4 ul:hover {
-    display: flex;
-    transition: 0.5s;
 }
 
 .nav-bar h4 ul {
@@ -108,6 +99,8 @@ a {
 .blue-color {
     color: blue;
 }
+
+/* SIMULADORES */
 
 .container {
     display: flex;
@@ -212,4 +205,113 @@ a {
     font-size: 1.2rem;
     background-color: transparent;
     border: none;
+}
+
+@media screen and ( max-width: 576px ) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        background-color: var(--background-color);
+    }
+
+    .simulator-options {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-right: 10px;
+    }
+    
+    .simulator-options div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        background-color: var(--dark-background-color);
+        border-radius: 7px;
+        margin: 10px;
+        padding: 7px;
+    }
+    
+    .simulator-options div p span {
+        display: flex;
+        font-weight: bold;
+    }
+    
+    .simulator-options div p span input {
+        width: 35%;
+    }
+
+    .simulator-container {
+        position: relative;
+        width: 95%;
+        height: 300px;
+        margin: 2.5%;
+        background-color: white;
+        border: solid 1px black;
+    }
+    
+    .simulator-container h6 {
+        position: absolute;
+        top: 5%;
+        width: 100%;
+        text-align: center;
+        font-size: 1.2rem;
+        color: rgba(100, 100, 100, 0.6);
+        z-index: 1;
+    }
+    
+    .simulator-container button {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        width: 75px;
+        height: 35px;
+        text-align: center;
+        font-size: 1.2rem;
+        background-color: var(--dark-background-color);
+        border: solid 1px black;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    .simulator-container button:hover {
+        background-color: var(--background-color);
+        color: #0f0f0f;
+    }
+    
+    #resorte {
+        position: absolute;
+        top: 0;
+        left: 48.75%;
+        width: 10px;
+        height: 120px;
+        background-color: black;
+    }
+    
+    #peso {
+        position: absolute;
+        top: 100%;
+        left: -20px;
+        width: 50px;
+        height: 50px;
+        padding-top: 18px;
+        background-color: darkseagreen;
+        text-align: center;
+        font-weight: bold;
+        font-size: 0.6rem;
+    }
+    
+    #tiempoMostrado {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 125px;
+        height: 35px;
+        text-align: center;
+        padding-top: 5px;
+        font-size: 1.2rem;
+        background-color: transparent;
+        border: none;
+    }
 }
