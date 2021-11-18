@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <h1>Simulación de oscilaciones</h1>
+        <h4>
+            <span>SIMULACIONES</span>
+            <ul>
+                <li><a href="./rutas/osciladorNoAmortiguado.html">Oscilador no amortiguado</a></li>
+                <li><a href="./rutas/osciladorAmortiguado.html">Oscilador amortiguado</a></li>
+                <li><a href="./rutas/osciladorBajoFuerzaConstante.html">Oscilador amortiguado bajo la acción de una fuerza externa constante</a></li>
+            </ul>
+        </h4>
+    </nav>
+    <div class="text-container">
+        <p>
+            Esta es una página web que contiene 3 simulaciones distintas de 3 distintos tipos de osciladores. <br> <br>
+            <b>Oscilador no amortiguado: </b> Es un oscilador que obedece la Ley de Hooke:
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=F = -kx">
+                <img src="http://www.alciro.org/cgi/tex.cgi?F = -kx" title="F = -kx" border="0" />
+            </a>
+            Despejando de esa ecuación tenemos que:
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=m\frac{\mathrm{d^{2}x} }{\mathrm{d} t^{2}} + kx = 0">
+                <img src="http://www.alciro.org/cgi/tex.cgi?m\frac{\mathrm{d^{2}x} }{\mathrm{d} t^{2}} + kx = 0" title="m\frac{\mathrm{d^{2}x} }{\mathrm{d} t^{2}} + kx = 0" border="0" />
+            </a>
+            Una ecuación diferencial la cual resolvemos mediante el use de la transformada de Laplace, el resultado queda de la siguiente manera:
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = x(0)cos(\sqrt{\frac{k}{m}t}) + v(0)sen(\sqrt{\frac{k}{m}t})">
+                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = x(0)cos(\sqrt{\frac{k}{m}t}) + v(0)sen(\sqrt{\frac{k}{m}t})" title="x(t) = x(0)cos(\sqrt{\frac{k}{m}t}) + v(0)sen(\sqrt{\frac{k}{m}t})" border="0" />
+            </a>
+            <br>
+            <b>Oscilador amortiguado: </b> Es un oscilador que tiene en cuenta el rozamiento, mismo el cual se opone a la velocidad, es decir que la fuerza de rozamiento es proporcional a la velocidad pero en dirección contraria, puesto en ecuación esto es que:
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=F = -kx - Yv">
+                <img src="http://www.alciro.org/cgi/tex.cgi?F = -kx - Yv" title="F = -kx - Yv" border="0" />
+            </a>
+            Donde al despejar tenemos:
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} + Y\frac{\mathrm{d}x }{\mathrm{d} t} + kx = 0">
+                <img src="http://www.alciro.org/cgi/tex.cgi?m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} + Y\frac{\mathrm{d}x }{\mathrm{d} t} + kx = 0" title="m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} + Y\frac{\mathrm{d}x }{\mathrm{d} t} + kx = 0" border="0" />
+            </a>
+            La cual tiene distintos resultados según ciertas condiciones: <br>
+            <b>Subamortiguado: </b> Sucede cuando
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=\left( \frac{Y}{2m} \right)^{2} <  \frac{K}{m}">
+                <img src="http://www.alciro.org/cgi/tex.cgi?\left( \frac{Y}{2m} \right)^{2} <  \frac{K}{m}" title="\left( \frac{Y}{2m} \right)^{2} <  \frac{K}{m}" border="0" />
+            </a>
+            Y el resultado es: 
+            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0) + \frac{Y}{2m}x(0) }{w} sen(wt) + x(0) cos(wt) \right)">
+                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0) + \frac{Y}{2m}x(0) }{w} sen(wt) + x(0) cos(wt) \right)" title="x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0) + \frac{Y}{2m}x(0) }{w} sen(wt) + x(0) cos(wt) \right)" border="0" />
+            </a>
+            Donde:
+        </p>
+    </div>
+</body>
+</html>

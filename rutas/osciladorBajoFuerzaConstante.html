@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <h1><a href="../index.html">Simulación de oscilaciones</a></h1>
+        <h4>
+            <span>SIMULACIONES</span>
+            <ul>
+                <li><a href="osciladorNoAmortiguado.html">Oscilador no amortiguado</a></li>
+                <li><a href="osciladorAmortiguado.html">Oscilador amortiguado</a></li>
+                <li><a href="osciladorBajoFuerzaConstante.html">Oscilador amortiguado bajo la acción de una fuerza externa constante</a></li>
+            </ul>
+        </h4>
+    </nav>
+    <div class="container">
+
+        <div class="simulator-options">
+
+            <div>
+                <p>Masa <br>
+                    <span>m=<input id="masaNumber" type="number" value="1" step="0.01" min="0.01"></span>
+                </p>
+                <input id="masaRange" type="range" min="0.01" max="50" value="1" step="0.01">
+            </div>
+
+            <div>
+                <p>Constante de Hooke <br>
+                    <span>K=<input id="constanteHookeNumber" type="number" value="1" step="0.01" min="0.01"></span>
+                </p>
+                <input id="constanteHookeRange" type="range" min="0.01" max="50" value="1" step="0.01">
+            </div>
+
+            <div>
+                <p>Tiempo de la simulación <br>
+                    <span>T=<input id="tiempoLimiteNumber" type="number" value="10" step="0.01" min="0.01"></span>
+                </p>
+                <input id="tiempoLimiteRange" type="range" min="0.01" max="50" value="10" step="0.01">
+            </div>
+
+            <div>
+                <p>Constante de rozamiento <br>
+                    <span>Y=<input id="constanteRozamientoNumber" type="number" value="1"></span>
+                </p>
+                <input id="constanteRozamientoRange" type="range" min="0" max="50" value="1">
+                <b></b>
+            </div>
+
+            <div>
+                <p>Fuerza constante <br>
+                    <span>F=<input id="fuerzaConstanteNumber" type="number" value="9.81"></span>
+                </p>
+                <input id="fuerzaConstanteRange" type="range" min="-50" max="50" value="9.81">
+                <b></b>
+            </div>
+
+        </div>
+
+        <div class="simulator-container">
+            <h6>OSCILADOR AMORTIGUADO BAJO LA ACCIÓN DE UNA FUERZA EXTERNA CONSTANTE</h6>
+            <button id="iniciarSimulacion">Iniciar</button>
+            <span id="tiempoMostrado">t = 0.000s</span>
+            <div id="resorte">
+                <div id="peso"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../JS/osciladorBajoFuerzaExterna.js"></script>
+</body>
+</html>
