@@ -8,58 +8,95 @@
     <title>Simulación de oscilaciones</title>
 </head>
 <body>
-    <nav class="nav-bar">
-        <h1><a href="../index.html">Simulación de oscilaciones</a></h1>
-        <h4 id = "Simulaciones">
-            <span>SIMULACIONES</span>
-            <ul id = "elegirSimulaciones">
-                <li><a href="../rutas/osciladorNoAmortiguado.html">Oscilador no amortiguado</a></li>
-                <li><a href="../rutas/osciladorAmortiguado.html">Oscilador amortiguado</a></li>
-                <li><a href="../rutas/osciladorBajoFuerzaConstante.html">Oscilador amortiguado bajo la acción de una fuerza externa constante</a></li>
-            </ul>
-        </h4>
-    </nav>
     <div class="container">
-
-        <div class="simulator-options">
-
-            <div>
-                <p>Masa <br>
-                    <span>m=<input id="masaNumber" type="number" value="1" step="0.01" min="0.01"></span>
-                </p>
-                <input id="masaRange" type="range" min="0.01" max="50" value="1" step="0.01">
-            </div>
-
-            <div>
-                <p>Constante de Hooke <br>
-                    <span>K=<input id="constanteHookeNumber" type="number" value="1" step="0.01" min="0.01"></span>
-                </p>
-                <input id="constanteHookeRange" type="range" min="0.01" max="50" value="1" step="0.01">
-            </div>
-
-            <div>
-                <p>Tiempo de la simulación <br>
-                    <span>T=<input id="tiempoLimiteNumber" type="number" value="10" step="0.01" min="0.01"></span>
-                </p>
-                <input id="tiempoLimiteRange" type="range" min="0.01" max="50" value="10" step="0.01">
-            </div>
-
-            <div>
-                <p>Constante de rozamiento <br>
-                    <span>Y=<input id="constanteRozamientoNumber" type="number" value="1"></span>
-                </p>
-                <input id="constanteRozamientoRange" type="range" min="0" max="50" value="1">
-                <b></b>
-            </div>
-
+        <div class="text-index">
+            <h1><a href="../index.html">OSCILACIONES</a></h1>
+            <ul>
+                <li>
+                    <a href="../index.html#intro">
+                        <h6><span>></span> INTRODUCCIÓN</h6>
+                    </a>
+                </li>
+                <li>
+                    <a href="../index.html#osciladorNoAmortiguado">
+                        <h6><span>></span> OSCILADOR NO AMORTIGUADO</h6>
+                    </a>
+                    <div class="title-options">
+                        <a href="./osciladorNoAmortiguado.html" class="simulation-button">
+                            <span>
+                                SIMULACIÓN
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="../index.html#osciladorAmortiguado">
+                        <h6><span>></span> OSCILADOR AMORTIGUADO</h6>
+                    </a>
+                    <div class="title-options">
+                        <a href="./osciladorAmortiguado.html" class="simulation-button">
+                            <span>
+                                SIMULACIÓN
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="../index.html#osciladorBajoFuerzaConstante">
+                        <h6><span>></span> OSCILADOR BAJO FUERZA CONSTANTE</h6>
+                    </a>
+                    <div class="title-options">
+                        <a href="./osciladorBajoFuerzaConstante.html" class="simulation-button">
+                            <span>
+                                SIMULACIÓN
+                            </span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
         </div>
 
-        <div class="simulator-container">
-            <h6>OSCILADOR AMORTIGUADO</h6>
-            <button id="iniciarSimulacion">Iniciar</button>
-            <span id="tiempoMostrado">t = 0.000s</span>
-            <div id="resorte">
-                <div id="peso"></div>
+        <div class="simulation-container">
+            <div class="simulator-options">
+
+                <div>
+                    <p>Masa <br>
+                        <span>m=<input id="masaNumber" type="number" value="1" step="0.01" min="0.01"></span>
+                    </p>
+                    <input id="masaRange" type="range" min="0.01" max="50" value="1" step="0.01">
+                </div>
+    
+                <div>
+                    <p>Constante de Hooke <br>
+                        <span>K=<input id="constanteHookeNumber" type="number" value="1" step="0.01" min="0.01"></span>
+                    </p>
+                    <input id="constanteHookeRange" type="range" min="0.01" max="50" value="1" step="0.01">
+                </div>
+    
+                <div>
+                    <p>Tiempo de la simulación <br>
+                        <span>T=<input id="tiempoLimiteNumber" type="number" value="10" step="0.01" min="0.01"></span>
+                    </p>
+                    <input id="tiempoLimiteRange" type="range" min="0.01" max="50" value="10" step="0.01">
+                </div>
+    
+                <div>
+                    <p>Constante de rozamiento <br>
+                        <span>Y=<input id="constanteRozamientoNumber" type="number" value="1"></span>
+                    </p>
+                    <input id="constanteRozamientoRange" type="range" min="0" max="50" value="1">
+                    <b></b>
+                </div>
+    
+            </div>
+    
+            <div class="simulator-container">
+                <h6>OSCILADOR AMORTIGUADO</h6>
+                <button id="iniciarSimulacion">Iniciar</button>
+                <span id="tiempoMostrado">t = 0.000s</span>
+                <div id="resorte">
+                    <div id="peso"></div>
+                </div>
             </div>
         </div>
 

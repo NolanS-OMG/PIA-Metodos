@@ -8,98 +8,175 @@
     <title>Simulación de oscilaciones</title>
 </head>
 <body>
-    <nav class="nav-bar">
-        <h1>Simulación de oscilaciones</h1>
-        <h4 id = "Simulaciones">
-            <span>SIMULACIONES</span>
-            <ul id = "elegirSimulaciones">
-                <li><a href="./rutas/osciladorNoAmortiguado.html">Oscilador no amortiguado</a></li>
-                <li><a href="./rutas/osciladorAmortiguado.html">Oscilador amortiguado</a></li>
-                <li><a href="./rutas/osciladorBajoFuerzaConstante.html">Oscilador amortiguado bajo la acción de una fuerza externa constante</a></li>
+    <div class="container">
+        <div class="text-index">
+            <h1><a href="index.html">OSCILACIONES</a></h1>
+            <ul>
+                <li>
+                    <a href="#intro">
+                        <h6><span>></span> INTRODUCCIÓN</h6>
+                    </a>
+                </li>
+                <li>
+                    <a href="#osciladorNoAmortiguado">
+                        <h6><span>></span> OSCILADOR NO AMORTIGUADO</h6>
+                    </a>
+                    <div class="title-options">
+                        <a href="./rutas/osciladorNoAmortiguado.html" class="simulation-button">
+                            <span>
+                                SIMULACIÓN
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#osciladorAmortiguado">
+                        <h6><span>></span> OSCILADOR AMORTIGUADO</h6>
+                    </a>
+                    <div class="title-options">
+                        <a href="./rutas/osciladorAmortiguado.html" class="simulation-button">
+                            <span>
+                                SIMULACIÓN
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#osciladorBajoFuerzaConstante">
+                        <h6><span>></span> OSCILADOR BAJO FUERZA CONSTANTE</h6>
+                    </a>
+                    <div class="title-options">
+                        <a href="./rutas/osciladorBajoFuerzaConstante.html" class="simulation-button">
+                            <span>
+                                SIMULACIÓN
+                            </span>
+                        </a>
+                    </div>
+                </li>
             </ul>
-        </h4>
-    </nav>
-    <div class="text-container">
-        <p>
-            Esta es una página web que contiene 3 simulaciones distintas de 3 distintos tipos de osciladores. <br> <br>
-            <b class="blue-color">Oscilador no amortiguado: </b> Es un oscilador que obedece la Ley de Hooke:
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=F = -kx">
-                <img src="http://www.alciro.org/cgi/tex.cgi?F = -kx" title="F = -kx" border="0" />
-            </a>
-            Despejando de esa ecuación tenemos que:
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=m\frac{\mathrm{d^{2}x} }{\mathrm{d} t^{2}} + kx = 0">
-                <img src="http://www.alciro.org/cgi/tex.cgi?m\frac{\mathrm{d^{2}x} }{\mathrm{d} t^{2}} + kx = 0" title="m\frac{\mathrm{d^{2}x} }{\mathrm{d} t^{2}} + kx = 0" border="0" />
-            </a>
-            Una ecuación diferencial la cual resolvemos mediante el use de la transformada de Laplace, el resultado queda de la siguiente manera:
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = x(0)cos(\sqrt{\frac{k}{m}t}) + v(0)sen(\sqrt{\frac{k}{m}t})">
-                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = x(0)cos(\sqrt{\frac{k}{m}t}) + v(0)sen(\sqrt{\frac{k}{m}t})" title="x(t) = x(0)cos(\sqrt{\frac{k}{m}t}) + v(0)sen(\sqrt{\frac{k}{m}t})" border="0" />
-            </a>
-            <br>
-            <b class="blue-color">Oscilador amortiguado: </b> Es un oscilador que tiene en cuenta el rozamiento, mismo el cual se opone a la velocidad, es decir que la fuerza de rozamiento es proporcional a la velocidad pero en dirección contraria, puesto en ecuación esto es que:
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=F = -kx - Yv">
-                <img src="http://www.alciro.org/cgi/tex.cgi?F = -kx - Yv" title="F = -kx - Yv" border="0" />
-            </a>
-            Donde al despejar tenemos:
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} + Y\frac{\mathrm{d}x }{\mathrm{d} t} + kx = 0">
-                <img src="http://www.alciro.org/cgi/tex.cgi?m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} + Y\frac{\mathrm{d}x }{\mathrm{d} t} + kx = 0" title="m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} + Y\frac{\mathrm{d}x }{\mathrm{d} t} + kx = 0" border="0" />
-            </a>
-            La cual tiene distintos resultados según ciertas condiciones: <br>
-            <b>Subamortiguado: </b> Sucede cuando
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=\left( \frac{Y}{2m} \right)^{2} <  \frac{K}{m}">
-                <img src="http://www.alciro.org/cgi/tex.cgi?\left( \frac{Y}{2m} \right)^{2} <  \frac{K}{m}" title="\left( \frac{Y}{2m} \right)^{2} <  \frac{K}{m}" border="0" />
-            </a>
-            Y el resultado es: 
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0) + \frac{Y}{2m}x(0) }{w} sen(wt) + x(0) cos(wt) \right)">
-                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0) + \frac{Y}{2m}x(0) }{w} sen(wt) + x(0) cos(wt) \right)" title="x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0) + \frac{Y}{2m}x(0) }{w} sen(wt) + x(0) cos(wt) \right)" border="0" />
-            </a>
-            Donde:
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=w = \sqrt{ \frac{k}{m} - \left( \frac{Y}{2m} \right)^{2} }">
-                <img src="http://www.alciro.org/cgi/tex.cgi?w = \sqrt{ \frac{k}{m} - \left( \frac{Y}{2m} \right)^{2} }" title="w = \sqrt{ \frac{k}{m} - \left( \frac{Y}{2m} \right)^{2} }" border="0" />
-            </a>
-            <b>Amortiguamiento crítico: </b> Sucede cuando
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=\left( \frac{Y}{2m} \right)^{2} =  \frac{K}{m}">
-                <img src="http://www.alciro.org/cgi/tex.cgi?\left( \frac{Y}{2m} \right)^{2} =  \frac{K}{m}" title="\left( \frac{Y}{2m} \right)^{2} =  \frac{K}{m}" border="0" />
-            </a>
-            Y el resultado es: 
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = e^{rt}\left( v(0) + \left[ rv(0) + \frac{Y}{m}x(0) \right]t \right)">
-                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = e^{rt}\left( v(0) + \left[ rv(0) + \frac{Y}{m}x(0) \right]t \right)" title="x(t) = e^{rt}\left( v(0) + \left[ rv(0) + \frac{Y}{m}x(0) \right]t \right)" border="0" />
-            </a>
-            Donde:
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=r = -\frac{Y}{2m}">
-                <img src="http://www.alciro.org/cgi/tex.cgi?r = -\frac{Y}{2m}" title="r = -\frac{Y}{2m}" border="0" />
-            </a>
-            <b>Sobreamortiguamiento: </b> Sucede cuando
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=\left( \frac{Y}{2m} \right)^{2} >  \frac{K}{m}">
-                <img src="http://www.alciro.org/cgi/tex.cgi?\left( \frac{Y}{2m} \right)^{2} >  \frac{K}{m}" title="\left( \frac{Y}{2m} \right)^{2} >  \frac{K}{m}" border="0" />
-            </a>
-            Y el resultado es: 
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = \frac{v(0) + \frac{Y}{m}x(0)}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right] + \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]">
-                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = \frac{v(0) + \frac{Y}{m}x(0)}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right] + \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]" title="x(t) = \frac{v(0) + \frac{Y}{m}x(0)}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right] + \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]" border="0" />
-            </a>
-            Donde:
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=r_{1} = -\frac{Y}{2m} + \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }">
-                <img src="http://www.alciro.org/cgi/tex.cgi?r_{1} = -\frac{Y}{2m} + \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }" title="r_{1} = -\frac{Y}{2m} + \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }" border="0" />
-            </a>
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=r_{2} = -\frac{Y}{2m} - \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }">
-                <img src="http://www.alciro.org/cgi/tex.cgi?r_{2} = -\frac{Y}{2m} - \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }" title="r_{2} = -\frac{Y}{2m} - \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }" border="0" />
-            </a>
-            <br> <br>
-            <b class="blue-color">Oscilador amortiguado bajo la acción de una fuerza externa constante: </b> Es practicamente igual que el anterior solo que toma en cuenta esta fuerza, las ecuaciones quedan:
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} +  Y\frac{\mathrm{d}x }{\mathrm{d} t}   kx = F">
-                <img src="http://www.alciro.org/cgi/tex.cgi?m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} +  Y\frac{\mathrm{d}x }{\mathrm{d} t}   kx = F" title="m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} +  Y\frac{\mathrm{d}x }{\mathrm{d} t}   kx = F" border="0" />
-            </a>
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0)   \frac{Y}{2m}x(0) + \frac{F}{m} }{w} sen(wt)   x(0) cos(wt) \right)">
-                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0)   \frac{Y}{2m}x(0) + \frac{F}{m} }{w} sen(wt)   x(0) cos(wt) \right)" title="x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0)   \frac{Y}{2m}x(0) + \frac{F}{m} }{w} sen(wt)   x(0) cos(wt) \right)" border="0" />
-            </a>
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = e^{rt}\left( v(0)   \left[ rv(0) +  \frac{Y}{m}x(0) +\frac{F}{m} \right]t \right)">
-                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = e^{rt}\left( v(0)   \left[ rv(0) +  \frac{Y}{m}x(0) +\frac{F}{m} \right]t \right)" title="x(t) = e^{rt}\left( v(0)   \left[ rv(0) +  \frac{Y}{m}x(0) +\frac{F}{m} \right]t \right)" border="0" />
-            </a>
-            <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = \frac{v(0) +  \frac{Y}{m}x(0) + \frac{F}{m}}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right]   \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]">
-                <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = \frac{v(0) +  \frac{Y}{m}x(0) + \frac{F}{m}}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right]   \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]" title="x(t) = \frac{v(0) +  \frac{Y}{m}x(0) + \frac{F}{m}}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right]   \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]" border="0" />
-            </a>
-        </p>
+        </div>
+        <hr>
+        <div class="text-container">
+            <h4 id="intro">INTRODUCCIÓN</h4>
+            <p>
+                Esta es una página web que contiene 3 simulaciones distintas de 3 distintos tipos de osciladores. Un oscilador,
+                en la práctica puede ser cualquier cosa que tenga una fuerza que la devuelva constantemente a su lugar original,                    el ejemplo mas sencillo es un resorte, pero puede también ser una superficie acolchonada, o algún plástico que
+                se deforma y vuelve a su forma original.
+            </p>
+            <h4 id="osciladorNoAmortiguado">
+                OSCILADOR NO AMORTIGUADO (O.N.A)
+                <a href="./rutas/osciladorNoAmortiguado.html" class="simulation-button">
+                    <span>IR A LA SIMULACIÓN O.N.A.</span>
+                </a>
+            </h4>
+            <p>
+                Este oscilador, es ideal, jamás se detiene, continúa su movimiento exactamente igual sin importar el tiempo. 
+                Una manera de verlo es como un resorte que no para de moverse. Este tipo de osciladores no suelen encontrarse en la naturaleza. <br>
+                Es un oscilador que obedece la Ley de Hooke:
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=F = -kx">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?F = -kx" title="F = -kx" border="0" />
+                </a>
+                Despejando de esa ecuación tenemos que:
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=m\frac{\mathrm{d^{2}x} }{\mathrm{d} t^{2}} + kx = 0">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?m\frac{\mathrm{d^{2}x} }{\mathrm{d} t^{2}} + kx = 0" title="m\frac{\mathrm{d^{2}x} }{\mathrm{d} t^{2}} + kx = 0" border="0" />
+                </a>
+                Una ecuación diferencial la cual resolvemos mediante el use de la transformada de Laplace, el resultado queda de la siguiente manera:
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = x(0)cos(\sqrt{\frac{k}{m}t}) + v(0)sen(\sqrt{\frac{k}{m}t})">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = x(0)cos(\sqrt{\frac{k}{m}t}) + v(0)sen(\sqrt{\frac{k}{m}t})" title="x(t) = x(0)cos(\sqrt{\frac{k}{m}t}) + v(0)sen(\sqrt{\frac{k}{m}t})" border="0" />
+                </a>
+            </p>
+            <h4 id="osciladorAmortiguado">
+                OSCILADOR AMORTIGUADO (O.A.)
+                <a href="./rutas/osciladorAmortiguado.html" class="simulation-button">
+                    <span>IR A LA SIMULACIÓN O.A.</span>
+                </a>
+            </h4>
+            <p>
+                Es un oscilador que tiene en cuenta el rozamiento, mismo el cual se opone a la velocidad, es decir que la fuerza de rozamiento es proporcional a la velocidad pero en dirección contraria, puesto en ecuación esto es que:
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=F = -kx - Yv">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?F = -kx - Yv" title="F = -kx - Yv" border="0" />
+                </a>
+                Donde al despejar tenemos:
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} + Y\frac{\mathrm{d}x }{\mathrm{d} t} + kx = 0">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} + Y\frac{\mathrm{d}x }{\mathrm{d} t} + kx = 0" title="m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} + Y\frac{\mathrm{d}x }{\mathrm{d} t} + kx = 0" border="0" />
+                </a>
+                La cual tiene distintos resultados según ciertas condiciones: <br>
+                <b>Subamortiguado: </b> Este oscilador, es bastante mas cercano a los que podemos encontrar en la naturaleza, por ejemplo, 
+                después de saltar en un trampolín, cuando estamos en el aire, la superficie se comporta como este tipo de oscilador. <br>
+                Sucede cuando:
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=\left( \frac{Y}{2m} \right)^{2} <  \frac{K}{m}">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?\left( \frac{Y}{2m} \right)^{2} <  \frac{K}{m}" title="\left( \frac{Y}{2m} \right)^{2} <  \frac{K}{m}" border="0" />
+                </a>
+                Y el resultado es: 
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0) + \frac{Y}{2m}x(0) }{w} sen(wt) + x(0) cos(wt) \right)">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0) + \frac{Y}{2m}x(0) }{w} sen(wt) + x(0) cos(wt) \right)" title="x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0) + \frac{Y}{2m}x(0) }{w} sen(wt) + x(0) cos(wt) \right)" border="0" />
+                </a>
+                Donde:
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=w = \sqrt{ \frac{k}{m} - \left( \frac{Y}{2m} \right)^{2} }">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?w = \sqrt{ \frac{k}{m} - \left( \frac{Y}{2m} \right)^{2} }" title="w = \sqrt{ \frac{k}{m} - \left( \frac{Y}{2m} \right)^{2} }" border="0" />
+                </a>
+                <b>Amortiguamiento crítico: </b> Este oscilador, tiende a tomar la forma original que tiene en cada momento, pero
+                sin oponerse con una gran fuerza, a diferencia del sobreamortiguado, un buen ejemplo es una cama de agua, cuando estamos
+                encima se balancea hasta moldearse a una forma concreta, y cuando nos quitamos también, pero cualquier fuerza pequeña puede
+                alterar esta forma a la que tiende a estabiliarse. <br>
+                Sucede cuando:
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=\left( \frac{Y}{2m} \right)^{2} =  \frac{K}{m}">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?\left( \frac{Y}{2m} \right)^{2} =  \frac{K}{m}" title="\left( \frac{Y}{2m} \right)^{2} =  \frac{K}{m}" border="0" />
+                </a>
+                Y el resultado es: 
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = e^{rt}\left( v(0) + \left[ rv(0) + \frac{Y}{m}x(0) \right]t \right)">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = e^{rt}\left( v(0) + \left[ rv(0) + \frac{Y}{m}x(0) \right]t \right)" title="x(t) = e^{rt}\left( v(0) + \left[ rv(0) + \frac{Y}{m}x(0) \right]t \right)" border="0" />
+                </a>
+                Donde:
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=r = -\frac{Y}{2m}">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?r = -\frac{Y}{2m}" title="r = -\frac{Y}{2m}" border="0" />
+                </a>
+                <b>Sobreamortiguamiento: </b> Cualquier resorte de materiales duros y de complexión gruesa, que se opone a deformarse con
+                una gran fuerza, como los que amortiguan las caídas de cualquier vehículo de ruedas, incluso las cuerdas de los puentes
+                colgantes se comportan de esta manera. <br>
+                Sucede cuando:
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=\left( \frac{Y}{2m} \right)^{2} >  \frac{K}{m}">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?\left( \frac{Y}{2m} \right)^{2} >  \frac{K}{m}" title="\left( \frac{Y}{2m} \right)^{2} >  \frac{K}{m}" border="0" />
+                </a>
+                Y el resultado es: 
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = \frac{v(0) + \frac{Y}{m}x(0)}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right] + \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = \frac{v(0) + \frac{Y}{m}x(0)}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right] + \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]" title="x(t) = \frac{v(0) + \frac{Y}{m}x(0)}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right] + \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]" border="0" />
+                </a>
+                Donde:
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=r_{1} = -\frac{Y}{2m} + \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?r_{1} = -\frac{Y}{2m} + \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }" title="r_{1} = -\frac{Y}{2m} + \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }" border="0" />
+                </a>
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=r_{2} = -\frac{Y}{2m} - \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?r_{2} = -\frac{Y}{2m} - \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }" title="r_{2} = -\frac{Y}{2m} - \sqrt{ \left( \frac{Y}{2m} \right)^{2} - \frac{k}{m} }" border="0" />
+                </a>
+            </p>
+            <h4 id="osciladorBajoFuerzaConstante">
+                OSCILADOR BAJO FUERZA CONSTANTE (O.B.F.C.)
+                <a href="./rutas/osciladorBajoFuerzaConstante.html" class="simulation-button">
+                    <span>IR A LA SIMULACIÓN O.B.F.C.</span>
+                </a>
+            </h4>
+            <p>
+                Es practicamente igual que el anterior, solo que toma en cuenta esta fuerza, podemos verlos como cualquier cuarda o resorte
+                que sostiene algo, y es útil también cuando es necesario tomar en cuenta el propio peso del oscilador, siendo esta
+                fuerza constante la que ocasiona la gravedad, las ecuaciones quedan:
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} +  Y\frac{\mathrm{d}x }{\mathrm{d} t}   kx = F">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} +  Y\frac{\mathrm{d}x }{\mathrm{d} t}   kx = F" title="m\frac{\mathrm{d^{2}}x }{\mathrm{d} t^{2}} +  Y\frac{\mathrm{d}x }{\mathrm{d} t}   kx = F" border="0" />
+                </a>
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0)   \frac{Y}{2m}x(0) + \frac{F}{m} }{w} sen(wt)   x(0) cos(wt) \right)">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0)   \frac{Y}{2m}x(0) + \frac{F}{m} }{w} sen(wt)   x(0) cos(wt) \right)" title="x(t) = e^{-\frac{Y}{2m}t}\left( \frac{v(0)   \frac{Y}{2m}x(0) + \frac{F}{m} }{w} sen(wt)   x(0) cos(wt) \right)" border="0" />
+                </a>
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = e^{rt}\left( v(0)   \left[ rv(0) +  \frac{Y}{m}x(0) +\frac{F}{m} \right]t \right)">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = e^{rt}\left( v(0)   \left[ rv(0) +  \frac{Y}{m}x(0) +\frac{F}{m} \right]t \right)" title="x(t) = e^{rt}\left( v(0)   \left[ rv(0) +  \frac{Y}{m}x(0) +\frac{F}{m} \right]t \right)" border="0" />
+                </a>
+                <a href="http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp?eq=x(t) = \frac{v(0) +  \frac{Y}{m}x(0) + \frac{F}{m}}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right]   \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]">
+                    <img src="http://www.alciro.org/cgi/tex.cgi?x(t) = \frac{v(0) +  \frac{Y}{m}x(0) + \frac{F}{m}}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right]   \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]" title="x(t) = \frac{v(0) +  \frac{Y}{m}x(0) + \frac{F}{m}}{r_{1} - r_{2}}\left[ e^{r_{1}t} - e^{r_{2}t} \right]   \frac{x(0)}{r_{1} - r_{2}}\left[ r_{1}e^{r_{1}t} - r_{2}e^{r_{2}t} \right]" border="0" />
+                </a>
+                <br>
+                <br>
+            </p>
+        </div>
     </div>
-
     <script src="JS/index.js"></script>
 </body>
 </html>
